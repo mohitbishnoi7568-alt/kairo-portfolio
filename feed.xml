@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Kairo — Writing</title>
+    <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/blog.html</link>
+    <description>Notes on code, design and small tools by Kairo.</description>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>On building small tools</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/small-tools.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/small-tools.html</guid>
+      <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+      <description>Why the best software I've made started as a script for myself.</description>
+      <category>Notes</category>
+    </item>
+    <item>
+      <title>Quiet interfaces</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/quiet-interfaces.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/quiet-interfaces.html</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <description>A few rules I use when removing things from a screen instead of adding them.</description>
+      <category>Design</category>
+    </item>
+    <item>
+      <title>Notes on testing</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/testing-notes.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/testing-notes.html</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 +0000</pubDate>
+      <description>What I actually keep as tests, and what I let go.</description>
+      <category>Code</category>
+    </item>
+    <item>
+      <title>A better command line setup</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/cli-setup.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/cli-setup.html</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <description>Five small changes that made my terminal feel like a workplace instead of a scratchpad.</description>
+      <category>Tools</category>
+    </item>
+    <item>
+      <title>Type scales that stay out of the way</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/type-scales.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/type-scales.html</guid>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <description>How I pick sizes for body text, headings and the small labels in between.</description>
+      <category>Design</category>
+    </item>
+    <item>
+      <title>What I keep in a README</title>
+      <link>https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/readme.html</link>
+      <guid isPermaLink="true">https://mohitbishnoi7568-alt.github.io/kairo-portfolio/posts/readme.html</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <description>A short checklist I use before calling a project finished enough to share.</description>
+      <category>Notes</category>
+    </item>
+  </channel>
+</rss>
