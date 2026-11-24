@@ -3,9 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9fb">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/icon-192.png" sizes="192x192">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="sw-path" content="./sw.js">
   <title>Kairo — Developer &amp; Writer</title>
-  <meta name="description" content="A minimal personal portfolio with notes, writing and docs — placeholder content you can replace.">
+  <meta name="description" content="Kairo's personal portfolio: projects, short notes on code and design, and working docs. Built with plain HTML, CSS and JS.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kairo">
+  <meta property="og:title" content="Kairo — Developer &amp; Writer">
+  <meta property="og:description" content="Projects, notes and working docs — a small, fast corner of the web.">
+  <meta property="og:url" content="https://mohitbishnoi7568-alt.github.io/kairo-portfolio/">
+  <meta property="og:image" content="https://mohitbishnoi7568-alt.github.io/kairo-portfolio/assets/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kairo","email":"mailto:noviqxofficial@gmail.com","url":"https://mohitbishnoi7568-alt.github.io/kairo-portfolio/"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,49 +26,79 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Home">K<span class="brand-dot">.</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="blog.html">Writing</a>
         <a href="docs.html">Docs</a>
         <a href="#contact">Contact</a>
       </nav>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Dark theme">☾</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
     <section class="hero wrap">
-      <p class="eyebrow">Portfolio &middot; Notes &middot; Experiments</p>
-      <h1>Hi, I'm <span class="accent">Kairo</span>.<br>I build things for the web.</h1>
-      <p class="lede">I'm a developer who likes small, fast, well-made things. This is a placeholder homepage — swap in your own story, projects and links.</p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">See my work <span aria-hidden="true">&rarr;</span></a>
-        <a class="btn" href="blog.html">Read the blog</a>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">Portfolio &middot; Notes &middot; Experiments</p>
+          <h1>Hi, I'm <span class="accent">Kairo</span>.<br>I build things for the web.</h1>
+          <p class="lede">I like small, fast, well-made things. This is my corner of the internet — a few projects, some notes on code and design, and docs I keep tidy.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">See my work <span aria-hidden="true">&rarr;</span></a>
+            <a class="btn" href="blog.html">Read the blog</a>
+          </div>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Your city</dd></div>
+            <div><dt>Focus</dt><dd>Web &amp; tools</dd></div>
+            <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span> Open to work</dd></div>
+          </dl>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-art-card">
+            <div class="hero-art-top"><span>kairo.portfolio</span><span class="hero-art-dot"></span></div>
+            <div class="hero-art-mark">K.</div>
+            <div class="hero-art-row"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          </div>
+        </div>
       </div>
-      <dl class="facts">
-        <div><dt>Based in</dt><dd>Your city</dd></div>
-        <div><dt>Focus</dt><dd>Web &amp; tools</dd></div>
-        <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span> Open to work</dd></div>
-      </dl>
     </section>
 
-    <section id="about" class="section wrap">
+    <section id="about" class="section wrap reveal">
       <div class="section-head">
         <p class="kicker">01 / About</p>
         <h2>A short introduction</h2>
       </div>
       <div class="two-col">
-        <p>I work on interfaces, developer tools and the small details that make software feel calm. This sentence is a placeholder — replace it with what you actually do and who you like helping.</p>
-        <p>Outside of work I write notes about design, code and things I'm learning. Those live in the <a href="blog.html">writing section</a>, with a few longer guides in the <a href="docs.html">docs</a>.</p>
+        <p>I work on interfaces, developer tools and the small details that make software feel calm. I care about things that load fast, respect your battery and don't get in the way.</p>
+        <p>Outside of work I write notes about design, code and whatever I'm learning. Those live in the <a href="blog.html">writing section</a>, with a few longer guides in the <a href="docs.html">docs</a>.</p>
       </div>
     </section>
 
-    <section id="projects" class="section wrap">
+    <section id="skills" class="section wrap reveal">
+      <div class="section-head">
+        <p class="kicker">02 / Toolkit</p>
+        <h2>Things I work with</h2>
+      </div>
+      <div class="chips">
+        <span class="chip pink">Android</span>
+        <span class="chip lavender">Web apps</span>
+        <span class="chip peach">Termux</span>
+        <span class="chip mint">Clean UI</span>
+        <span class="chip sky">Developer tools</span>
+        <span class="chip pink">Plain HTML/CSS/JS</span>
+        <span class="chip lavender">Writing</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap reveal">
       <div class="section-head split">
         <div>
-          <p class="kicker">02 / Projects</p>
+          <p class="kicker">03 / Projects</p>
           <h2>Selected work</h2>
         </div>
         <a class="text-link" href="docs.html#projects">How these are organized &rarr;</a>
@@ -65,54 +108,54 @@
           <div class="thumb thumb-a" aria-hidden="true"><span>01</span></div>
           <div class="card-body">
             <p class="tag">Tool</p>
-            <h3>Project One</h3>
-            <p>A short description of what it does, who it helps, and what you built. Keep it to two lines.</p>
-            <a class="text-link" href="#">View project &rarr;</a>
+            <h3>Pocket Tools</h3>
+            <p>A small set of utilities that live on a phone and get out of the way. Built around one rule: open, do the thing, close.</p>
+            <a class="text-link" href="posts/small-tools.html">Read the story &rarr;</a>
           </div>
         </article>
         <article class="card">
           <div class="thumb thumb-b" aria-hidden="true"><span>02</span></div>
           <div class="card-body">
-            <p class="tag">Web app</p>
-            <h3>Project Two</h3>
-            <p>Another project. Mention the stack or the interesting constraint — the thing you'd want someone to remember.</p>
-            <a class="text-link" href="#">View project &rarr;</a>
+            <p class="tag">UI experiment</p>
+            <h3>Quiet UI Kit</h3>
+            <p>A collection of calm, readable interface patterns — fewer colours, better spacing, and motion only where it helps.</p>
+            <a class="text-link" href="posts/quiet-interfaces.html">Read the story &rarr;</a>
           </div>
         </article>
         <article class="card">
           <div class="thumb thumb-c" aria-hidden="true"><span>03</span></div>
           <div class="card-body">
-            <p class="tag">Open source</p>
-            <h3>Project Three</h3>
-            <p>A library, a CLI, or an experiment. One clear sentence is enough; the link can carry the rest.</p>
-            <a class="text-link" href="#">View project &rarr;</a>
+            <p class="tag">Notes</p>
+            <h3>Open Notes</h3>
+            <p>Short write-ups of things I figure out, kept in plain text so they stay searchable and easy to move around.</p>
+            <a class="text-link" href="posts/readme.html">Read the story &rarr;</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="writing" class="section wrap">
+    <section id="writing" class="section wrap reveal">
       <div class="section-head split">
         <div>
-          <p class="kicker">03 / Writing</p>
+          <p class="kicker">04 / Writing</p>
           <h2>Recent notes</h2>
         </div>
         <a class="text-link" href="blog.html">All posts &rarr;</a>
       </div>
       <div class="post-grid">
-        <a class="post-card" href="post.html">
+        <a class="post-card" href="posts/small-tools.html">
           <p class="meta"><time datetime="2026-11-18">Nov 18, 2026</time> &middot; Notes</p>
           <h3>On building small tools</h3>
           <p>Why the best software I've made started as a script for myself.</p>
           <span class="read-more">Read post &rarr;</span>
         </a>
-        <a class="post-card" href="post.html">
+        <a class="post-card" href="posts/quiet-interfaces.html">
           <p class="meta"><time datetime="2026-10-02">Oct 2, 2026</time> &middot; Design</p>
           <h3>Quiet interfaces</h3>
           <p>A few rules I use when removing things from a screen instead of adding them.</p>
           <span class="read-more">Read post &rarr;</span>
         </a>
-        <a class="post-card" href="post.html">
+        <a class="post-card" href="posts/testing-notes.html">
           <p class="meta"><time datetime="2026-08-21">Aug 21, 2026</time> &middot; Code</p>
           <h3>Notes on testing</h3>
           <p>What I actually keep as tests, and what I let go.</p>
@@ -121,9 +164,21 @@
       </div>
     </section>
 
-    <section id="notes" class="section wrap">
+    <section id="now" class="section wrap reveal">
       <div class="section-head">
-        <p class="kicker">04 / Notes</p>
+        <p class="kicker">05 / Now</p>
+        <h2>Currently</h2>
+      </div>
+      <div class="now-grid">
+        <div class="now-card"><p class="now-label">Building</p><h3>Small tools</h3><p>Little utilities that solve one annoyance really well.</p></div>
+        <div class="now-card"><p class="now-label">Learning</p><h3>Quiet design</h3><p>Typography, spacing and the art of removing things.</p></div>
+        <div class="now-card"><p class="now-label">Open to</p><h3>Good ideas</h3><p>Collaborations, questions and honest feedback.</p></div>
+      </div>
+    </section>
+
+    <section id="notes" class="section wrap reveal">
+      <div class="section-head">
+        <p class="kicker">06 / Notes</p>
         <h2>A docs-style corner</h2>
       </div>
       <div class="docs-teaser">
@@ -142,16 +197,22 @@
       </div>
     </section>
 
-    <section id="contact" class="section wrap">
+    <section id="contact" class="section wrap reveal">
       <div class="section-head">
-        <p class="kicker">05 / Contact</p>
+        <p class="kicker">07 / Contact</p>
         <h2>Say hello</h2>
       </div>
       <div class="contact-box">
         <div>
           <p>Have a project, a question, or just want to say hi? Drop me a line — I usually reply within a day or two.</p>
           <p class="contact-mail"><a href="mailto:noviqxofficial@gmail.com">noviqxofficial@gmail.com</a> <button type="button" class="copy-btn" data-copy="noviqxofficial@gmail.com" aria-label="Copy email address">Copy</button></p>
+          <p class="form-note">The form on the right opens your email app with the message ready — nothing is stored here.</p>
         </div>
+        <form id="contact-form" class="contact-form">
+          <label>Your name<input name="name" type="text" autocomplete="name" required placeholder="Kairo"></label>
+          <label>Message<textarea name="message" rows="4" required placeholder="What's on your mind?"></textarea></label>
+          <button class="btn primary" type="submit">Open in email app &rarr;</button>
+        </form>
       </div>
     </section>
   </main>
@@ -159,10 +220,14 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <p>&copy; <span data-year>2026</span> Kairo. Built with plain HTML, CSS and JS.</p>
-      <p><a href="#main">Back to top &uarr;</a></p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a><a href="blog.html">Writing</a><a href="docs.html">Docs</a><a href="feed.xml">RSS</a><a href="#main">Top &uarr;</a>
+      </nav>
     </div>
   </footer>
 
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top" title="Back to top">&uarr;</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="js/main.js" defer></script>
 </body>
 </html>
