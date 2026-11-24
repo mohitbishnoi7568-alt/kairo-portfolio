@@ -3,9 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9fb">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/icon-192.png" sizes="192x192">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="sw-path" content="./sw.js">
   <title>Writing — Kairo</title>
-  <meta name="description" content="Notes on code, design and small tools — placeholder posts for a personal blog.">
+  <meta name="description" content="Notes on code, design and small tools by Kairo. Search by topic or save posts for later.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kairo">
+  <meta property="og:title" content="Writing — Kairo">
+  <meta property="og:description" content="Notes on code, design and small tools.">
+  <meta property="og:url" content="https://mohitbishnoi7568-alt.github.io/kairo-portfolio/blog.html">
+  <meta property="og:image" content="https://mohitbishnoi7568-alt.github.io/kairo-portfolio/assets/og-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Kairo","email":"mailto:noviqxofficial@gmail.com","url":"https://mohitbishnoi7568-alt.github.io/kairo-portfolio/"}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,15 +26,16 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="Home">K<span class="brand-dot">.</span></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-        <span></span><span></span><span></span>
-      </button>
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="blog.html" aria-current="page">Writing</a>
         <a href="docs.html">Docs</a>
         <a href="index.html#contact">Contact</a>
       </nav>
+      <div class="header-actions">
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Dark theme">☾</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
@@ -29,11 +43,16 @@
     <div class="wrap page-head">
       <p class="eyebrow">Writing</p>
       <h1>Notes, short and long.</h1>
-      <p class="lede">A placeholder archive. Filter by topic, then open any post to see the reading view.</p>
+      <p class="lede">A small archive. Search by title, filter by topic, or star a post to keep it in the Saved list on this device.</p>
     </div>
 
     <div class="wrap layout">
-      <aside class="sidebar" aria-label="Filter posts by topic">
+      <aside class="sidebar" aria-label="Find posts">
+        <div class="search-box">
+          <label class="search-icon" for="post-search" aria-hidden="true">⌕</label>
+          <input class="search-input" id="post-search" type="search" placeholder="Search posts…" aria-label="Search posts" autocomplete="off">
+          <p class="search-hint">Tip: press <kbd>/</kbd> to focus search</p>
+        </div>
         <h2>Topics</h2>
         <div class="filter-list">
           <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All posts</button>
@@ -41,52 +60,76 @@
           <button class="filter-btn" type="button" data-filter="design" aria-pressed="false">Design</button>
           <button class="filter-btn" type="button" data-filter="code" aria-pressed="false">Code</button>
           <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false">Tools</button>
+          <button class="filter-btn" type="button" data-filter="saved" aria-pressed="false">★ Saved</button>
         </div>
         <p class="result-count"><span id="visible-count">6</span> posts shown</p>
       </aside>
 
-      <div class="post-list">
-        <a class="list-item" href="post.html" data-category="notes">
-          <p class="meta"><time datetime="2026-11-18">Nov 18, 2026</time> &middot; Notes</p>
-          <h3>On building small tools</h3>
-          <p>Why the best software I've made started as a script for myself.</p>
-        </a>
-        <a class="list-item" href="post.html" data-category="design">
-          <p class="meta"><time datetime="2026-10-02">Oct 2, 2026</time> &middot; Design</p>
-          <h3>Quiet interfaces</h3>
-          <p>A few rules I use when removing things from a screen instead of adding them.</p>
-        </a>
-        <a class="list-item" href="post.html" data-category="code">
-          <p class="meta"><time datetime="2026-08-21">Aug 21, 2026</time> &middot; Code</p>
-          <h3>Notes on testing</h3>
-          <p>What I actually keep as tests, and what I let go.</p>
-        </a>
-        <a class="list-item" href="post.html" data-category="tools">
-          <p class="meta"><time datetime="2026-07-09">Jul 9, 2026</time> &middot; Tools</p>
-          <h3>A better command line setup</h3>
-          <p>Five small changes that made my terminal feel like a workplace instead of a scratchpad.</p>
-        </a>
-        <a class="list-item" href="post.html" data-category="design">
-          <p class="meta"><time datetime="2026-05-30">May 30, 2026</time> &middot; Design</p>
-          <h3>Type scales that stay out of the way</h3>
-          <p>How I pick sizes for body text, headings and the small labels in between.</p>
-        </a>
-        <a class="list-item" href="post.html" data-category="notes">
-          <p class="meta"><time datetime="2026-03-14">Mar 14, 2026</time> &middot; Notes</p>
-          <h3>What I keep in a README</h3>
-          <p>A short checklist I use before calling a project finished enough to share.</p>
-        </a>
+      <div class="post-list" aria-live="polite">
+        <div class="list-item" data-category="notes" data-post="small-tools" data-search="on building small tools notes scripts tools small useful">
+          <a class="list-item-link" href="posts/small-tools.html">
+            <p class="meta"><time datetime="2026-11-18">Nov 18, 2026</time> &middot; Notes &middot; <span class="read-time">4 min</span><span class="featured">Featured</span></p>
+            <h3>On building small tools</h3>
+            <p>Why the best software I've made started as a script for myself.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="small-tools" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
+        <div class="list-item" data-category="design" data-post="quiet-interfaces" data-search="quiet interfaces design removing elements calm typography colour">
+          <a class="list-item-link" href="posts/quiet-interfaces.html">
+            <p class="meta"><time datetime="2026-10-02">Oct 2, 2026</time> &middot; Design &middot; <span class="read-time">5 min</span></p>
+            <h3>Quiet interfaces</h3>
+            <p>A few rules I use when removing things from a screen instead of adding them.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="quiet-interfaces" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
+        <div class="list-item" data-category="code" data-post="testing-notes" data-search="notes on testing code tests regression what to keep">
+          <a class="list-item-link" href="posts/testing-notes.html">
+            <p class="meta"><time datetime="2026-08-21">Aug 21, 2026</time> &middot; Code &middot; <span class="read-time">6 min</span></p>
+            <h3>Notes on testing</h3>
+            <p>What I actually keep as tests, and what I let go.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="testing-notes" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
+        <div class="list-item" data-category="tools" data-post="cli-setup" data-search="a better command line setup tools terminal aliases prompt history">
+          <a class="list-item-link" href="posts/cli-setup.html">
+            <p class="meta"><time datetime="2026-07-09">Jul 9, 2026</time> &middot; Tools &middot; <span class="read-time">5 min</span></p>
+            <h3>A better command line setup</h3>
+            <p>Five small changes that made my terminal feel like a workplace instead of a scratchpad.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="cli-setup" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
+        <div class="list-item" data-category="design" data-post="type-scales" data-search="type scales that stay out of the way design font sizes typography rhythm">
+          <a class="list-item-link" href="posts/type-scales.html">
+            <p class="meta"><time datetime="2026-05-30">May 30, 2026</time> &middot; Design &middot; <span class="read-time">4 min</span></p>
+            <h3>Type scales that stay out of the way</h3>
+            <p>How I pick sizes for body text, headings and the small labels in between.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="type-scales" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
+        <div class="list-item" data-category="notes" data-post="readme" data-search="what i keep in a readme notes documentation handoff">
+          <a class="list-item-link" href="posts/readme.html">
+            <p class="meta"><time datetime="2026-03-14">Mar 14, 2026</time> &middot; Notes &middot; <span class="read-time">3 min</span></p>
+            <h3>What I keep in a README</h3>
+            <p>A short checklist I use before calling a project finished enough to share.</p>
+          </a>
+          <button class="save-btn" type="button" data-save="readme" aria-label="Save for later" aria-pressed="false">☆</button>
+        </div>
       </div>
+      <div class="empty-state" id="empty-state" hidden>No posts match that search. Try another word or a different topic.</div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <p>&copy; <span data-year>2026</span> Kairo. Built with plain HTML, CSS and JS.</p>
-      <p><a href="#main">Back to top &uarr;</a></p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a><a href="blog.html">Writing</a><a href="docs.html">Docs</a><a href="feed.xml">RSS</a><a href="#main">Top &uarr;</a>
+      </nav>
     </div>
   </footer>
 
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top" title="Back to top">&uarr;</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="js/main.js" defer></script>
 </body>
 </html>
