@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kairo monogram">
+  <defs>
+    <linearGradient id="kairo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="0.55" stop-color="#c084fc"/>
+      <stop offset="1" stop-color="#7ab8f0"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" fill="url(#kairo)"/>
+  <text x="256" y="352" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="320" font-weight="700" fill="#ffffff">K</text>
+</svg>
