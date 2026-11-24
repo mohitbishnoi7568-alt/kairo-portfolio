@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohitbishnoi7568-alt.github.io/kairo-portfolio/sitemap.xml
