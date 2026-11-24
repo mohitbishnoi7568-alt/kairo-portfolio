@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing — Kairo</title>
+  <meta name="description" content="Notes on code, design and small tools — placeholder posts for a personal blog.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Home">K<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="blog.html" aria-current="page">Writing</a>
+        <a href="docs.html">Docs</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap page-head">
+      <p class="eyebrow">Writing</p>
+      <h1>Notes, short and long.</h1>
+      <p class="lede">A placeholder archive. Filter by topic, then open any post to see the reading view.</p>
+    </div>
+
+    <div class="wrap layout">
+      <aside class="sidebar" aria-label="Filter posts by topic">
+        <h2>Topics</h2>
+        <div class="filter-list">
+          <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All posts</button>
+          <button class="filter-btn" type="button" data-filter="notes" aria-pressed="false">Notes</button>
+          <button class="filter-btn" type="button" data-filter="design" aria-pressed="false">Design</button>
+          <button class="filter-btn" type="button" data-filter="code" aria-pressed="false">Code</button>
+          <button class="filter-btn" type="button" data-filter="tools" aria-pressed="false">Tools</button>
+        </div>
+        <p class="result-count"><span id="visible-count">6</span> posts shown</p>
+      </aside>
+
+      <div class="post-list">
+        <a class="list-item" href="post.html" data-category="notes">
+          <p class="meta"><time datetime="2026-11-18">Nov 18, 2026</time> &middot; Notes</p>
+          <h3>On building small tools</h3>
+          <p>Why the best software I've made started as a script for myself.</p>
+        </a>
+        <a class="list-item" href="post.html" data-category="design">
+          <p class="meta"><time datetime="2026-10-02">Oct 2, 2026</time> &middot; Design</p>
+          <h3>Quiet interfaces</h3>
+          <p>A few rules I use when removing things from a screen instead of adding them.</p>
+        </a>
+        <a class="list-item" href="post.html" data-category="code">
+          <p class="meta"><time datetime="2026-08-21">Aug 21, 2026</time> &middot; Code</p>
+          <h3>Notes on testing</h3>
+          <p>What I actually keep as tests, and what I let go.</p>
+        </a>
+        <a class="list-item" href="post.html" data-category="tools">
+          <p class="meta"><time datetime="2026-07-09">Jul 9, 2026</time> &middot; Tools</p>
+          <h3>A better command line setup</h3>
+          <p>Five small changes that made my terminal feel like a workplace instead of a scratchpad.</p>
+        </a>
+        <a class="list-item" href="post.html" data-category="design">
+          <p class="meta"><time datetime="2026-05-30">May 30, 2026</time> &middot; Design</p>
+          <h3>Type scales that stay out of the way</h3>
+          <p>How I pick sizes for body text, headings and the small labels in between.</p>
+        </a>
+        <a class="list-item" href="post.html" data-category="notes">
+          <p class="meta"><time datetime="2026-03-14">Mar 14, 2026</time> &middot; Notes</p>
+          <h3>What I keep in a README</h3>
+          <p>A short checklist I use before calling a project finished enough to share.</p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>&copy; <span data-year>2026</span> Kairo. Built with plain HTML, CSS and JS.</p>
+      <p><a href="#main">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
