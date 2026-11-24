@@ -1,11 +1,11 @@
 // Offline cache for Kairo's site. Bump the version when files change.
-const CACHE = 'kairo-portfolio-v1';
+const CACHE = 'kairo-portfolio-v2';
 const ASSETS = [
   './', './index.html', './blog.html', './docs.html', './404.html',
   './posts/small-tools.html', './posts/quiet-interfaces.html',
   './posts/testing-notes.html', './posts/cli-setup.html',
   './posts/type-scales.html', './posts/readme.html',
-  './css/style.css', './js/main.js',
+  './css/style.css', './js/main.js', './kairo-assistant.js', './css/kairo-assistant.css', './post.html',
   './assets/icon.svg', './assets/icon-192.png', './assets/icon-512.png', './assets/og-preview.png',
   './manifest.webmanifest', './feed.xml', './sitemap.xml'
 ];
